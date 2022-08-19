@@ -28,7 +28,10 @@ class Goalkeeper:
         # Si el robot está lo suficientemente cerca del punto objetivo, 
         # entonces giramos para mirar a los laterales. Sino, nos movemos
         # hacia el punto objetivo
-        target = Point(ball.x, - 0.55)
+        if snapshot.color == "Y":
+            target = Point(ball.x, - 0.55)
+        else:
+            target = Point(ball.x, + 0.55)
         if robot.getPosition().dist(target) < 0.01:
             robot.lookAtAngle(degrees(90))
         else:
