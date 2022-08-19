@@ -8,7 +8,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
-  position 1.6217650265048054e-16 -5.986810227455077e-17 2.921512147619818
+  position -1.1829547219356249e-06 -1.182958067278502e-06 2.503156681254186
 }
 TexturedBackground {
 }
@@ -455,7 +455,7 @@ DEF B1 Robot {
       ]
       endPoint Solid {
         translation 0 -0.045 -0.0176
-        rotation -3.337240149329015e-15 -6.254334002834076e-15 1 1.5707999999999998
+        rotation -2.5862761852204205e-15 -8.331549038025773e-15 1 1.5707999999999893
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -502,7 +502,7 @@ DEF B1 Robot {
       ]
       endPoint Solid {
         translation 0 0.045 -0.0176
-        rotation -6.410229215105164e-15 -3.362702725970239e-15 1 1.5707996938995745
+        rotation -6.830831326023116e-15 -5.446907192740836e-15 1 1.5707996938995525
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -694,7 +694,7 @@ DEF B1 Robot {
     density -1
     mass 0.2
   }
-  controller "p_54321"
+  controller "rcj_soccer_team_blue"
 }
 DEF B2 Robot {
   translation -0.227682 0.452902 0.0373044
@@ -716,7 +716,7 @@ DEF B2 Robot {
       ]
       endPoint Solid {
         translation 0 -0.045 -0.0176
-        rotation -3.337240149329015e-15 -6.254334002834076e-15 1 1.5707999999999998
+        rotation -1.820857510361819e-15 -3.3465146430722977e-15 1 1.570799999999986
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -763,7 +763,7 @@ DEF B2 Robot {
       ]
       endPoint Solid {
         translation 0 0.045 -0.0176
-        rotation -6.410229215105164e-15 -3.362702725970239e-15 1 1.5707996938995745
+        rotation -6.085038660803722e-15 2.089523919221107e-15 1 1.5707996938995517
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -952,7 +952,7 @@ DEF B2 Robot {
   name "B2"
   boundingObject USE BLUE_ROBOT_SHAPE
   physics USE ROBOT_PHYSICS
-  controller "p_54321"
+  controller "rcj_soccer_team_blue"
 }
 DEF B3 Robot {
   translation 0.0646362 0.431265 0.0373044
@@ -974,7 +974,7 @@ DEF B3 Robot {
       ]
       endPoint Solid {
         translation 0 -0.045 -0.0176
-        rotation -3.337240149329015e-15 -6.254334002834076e-15 1 1.5707999999999998
+        rotation -2.1937537984752852e-15 -7.723139319502934e-15 1 1.5707999999999935
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -1021,7 +1021,7 @@ DEF B3 Robot {
       ]
       endPoint Solid {
         translation 0 0.045 -0.0176
-        rotation -6.410229215105164e-15 -3.362702725970239e-15 1 1.5707996938995745
+        rotation -8.440173397877843e-15 -3.4057904204929134e-15 1 1.570799693899559
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -1210,7 +1210,7 @@ DEF B3 Robot {
   name "B3"
   boundingObject USE BLUE_ROBOT_SHAPE
   physics USE ROBOT_PHYSICS
-  controller "p_54321"
+  controller "rcj_soccer_team_blue"
 }
 DEF Y1 Robot {
   translation -0.274383 -0.359359 0.0373044
@@ -1231,8 +1231,8 @@ DEF Y1 Robot {
         }
       ]
       endPoint Solid {
-        translation 0 -0.045 -0.0176
-        rotation -4.84338434959195e-11 4.843366558880515e-11 -1 1.5708
+        translation 7.222810697197188e-16 -0.04499999999999993 -0.0176
+        rotation -2.421697877412348e-10 2.42169065027552e-10 -1 1.5707999999999998
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -1278,8 +1278,8 @@ DEF Y1 Robot {
         }
       ]
       endPoint Solid {
-        translation 0 0.045 -0.0176
-        rotation -4.7379215983996383e-11 4.737904195073807e-11 -1 1.5708
+        translation -1.6653466889278978e-16 0.04499999999999993 -0.0176
+        rotation -2.368964243824144e-10 2.368954665074641e-10 -1 1.57079999999999
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -1318,6 +1318,7 @@ DEF Y1 Robot {
     }
     DEF YELLOW_ROBOT_SHAPE Shape {
       appearance PBRAppearance {
+        baseColor 0 0.333333 1
         baseColorMap ImageTexture {
           url [
             "soccer/yellow.png"
@@ -1489,8 +1490,8 @@ DEF Y2 Robot {
         }
       ]
       endPoint Solid {
-        translation 0 -0.045 -0.0176
-        rotation -3.8834926253180834e-11 3.883478360479352e-11 -1 1.5708
+        translation 1.1192704507401077e-16 -0.04499999999999987 -0.0176
+        rotation -2.286930584062036e-10 2.2869310143474182e-10 -1 1.5707999999999926
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -1536,8 +1537,8 @@ DEF Y2 Robot {
         }
       ]
       endPoint Solid {
-        translation 0 0.045 -0.0176
-        rotation -3.928559242945016e-11 3.92854481256766e-11 -1 1.5708
+        translation -4.978129718164673e-16 0.04500000000000004 -0.0176
+        rotation -2.313478129002082e-10 2.3134877817244005e-10 -1 1.570799999999993
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -1747,8 +1748,8 @@ DEF Y3 Robot {
         }
       ]
       endPoint Solid {
-        translation 0 -0.045 -0.0176
-        rotation 2.9348523611361095e-11 -2.934841580841238e-11 -1 1.5708
+        translation 4.443206327400438e-16 -0.04500000000000001 -0.0176
+        rotation 1.7282960061574362e-10 -1.7283155124960703e-10 -1 1.57079999999999
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
@@ -1794,8 +1795,8 @@ DEF Y3 Robot {
         }
       ]
       endPoint Solid {
-        translation 0 0.045 -0.0176
-        rotation 2.931255238536323e-11 -2.9312444714543974e-11 -1 1.5708
+        translation 1.2476608381294077e-16 0.04499999999999988 -0.0176
+        rotation 1.7261835198894734e-10 -1.7261865404343803e-10 -1 1.570799999999993
         children [
           Transform {
             rotation -0.5771969549958951 0.5776567755050862 -0.5771969549958951 2.0939354039397986
