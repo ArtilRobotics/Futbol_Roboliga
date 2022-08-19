@@ -14,7 +14,7 @@ class BallFollower:
             robot.moveToPoint(Point.ORIGIN)
 
 # El rol "Goalkeeper" implementa un arquero básico
-class Goalkeeper:
+class Goalkeeper: 
     def applyOn(self, robot, snapshot):
         # Definimos un punto objetivo en el cual queremos ubicar el robot.
         # Este punto está dado por la coordenada X de la pelota y un valor
@@ -29,10 +29,20 @@ class Goalkeeper:
         # entonces giramos para mirar a los laterales. Sino, nos movemos
         # hacia el punto objetivo
         if snapshot.color == "Y":
-            target = Point(ball.x, - 0.55)
+                target = Point(ball.x, - 0.65)
         else:
-            target = Point(ball.x, + 0.55)
-        if robot.getPosition().dist(target) < 0.01:
-            robot.lookAtAngle(degrees(90))
+                target = Point(ball.x,+ 0.65)
+        posicion= robot.getPosition()
+        dist = abs(posicion.y-ball.y) 
+        print(dist)
+        if dist < 0.1:
+            if snapshot.color == "Y":
+                robot.lookAtAngle(degrees(180))             
+                target = Point(ball.x, ball.y+0.05)
+                robot.moveToPoint(target)            
+            else:
+                robot.lookAtAngle(degrees(0))              
+                target = Point(ball.x, ball.xy-0.05)
+                robot.moveToPoint(target)             
         else:
             robot.moveToPoint(target)
